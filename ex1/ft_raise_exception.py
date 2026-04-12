@@ -1,16 +1,20 @@
 #!/usr/bin/python3
 def input_temperature(temp_str: str) -> int:
     temp_min: int
-    temp_max: max
+    temp_max: int
     temp_int: int
-    
-    temp_int = ((int)(temp_str))
+
+    temp_int = int(temp_str)
     temp_min = 0
     temp_max = 40
     if (temp_int <= temp_min):
-        raise Exception(f"{temp_int}°C is too cold for plants (min {temp_min}°C)")
+        raise Exception(
+            f"{temp_int}°C is too cold for plants (min {temp_min}°C)"
+        )
     elif (temp_int >= temp_max):
-        raise Exception(f"{temp_int}°C is too hot for plants (max {temp_max}°C)")
+        raise Exception(
+            f"{temp_int}°C is too hot for plants (max {temp_max}°C)"
+        )
     return (temp_int)
 
 
